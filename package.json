@@ -4,8 +4,8 @@
   "description": "Clean architecture implementation project study for a cyclist meeting events api",
   "main": "index.js",
   "scripts": {
-    "test": "jest",
-    "test:staged": "jest"
+    "test": "jest --passWithNoTests",
+    "test:staged": "jest --passWithNoTests"
   },
   "keywords": [
     "API",
@@ -37,6 +37,10 @@
     "typescript": "^4.5.5"
   },
   "lint-staged": {
-    "*.js": "eslint --cache --fix"
+    "*.ts": [
+      "eslint 'src/**' --fix",
+      "npm run test:staged",
+      "git add --all"
+    ]
   }
 }
