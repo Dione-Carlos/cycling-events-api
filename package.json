@@ -4,7 +4,7 @@
   "description": "Clean architecture implementation project study for a cyclist meeting events api",
   "main": "index.js",
   "scripts": {
-    "test": "jest --passWithNoTests",
+    "test": "jest --passWithNoTests --watch",
     "test:staged": "jest --passWithNoTests"
   },
   "keywords": [
