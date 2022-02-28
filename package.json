@@ -15,5 +15,8 @@
     "Typescript"
   ],
   "author": "Dione Carlos<dione.csf@gmail.com>",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "git-commit-msg-linter": "^4.1.1"
+  }
 }
