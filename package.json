@@ -1,0 +1,19 @@
+{
+  "name": "cycling-events-api",
+  "version": "1.0.0",
+  "description": "Clean architecture implementation project study for a cyclist meeting events api",
+  "main": "index.js",
+  "scripts": {
+    "test": ""
+  },
+  "keywords": [
+    "API",
+    "Clean Architecture",
+    "Design Patterns",
+    "SOLID",
+    "TDD",
+    "Typescript"
+  ],
+  "author": "Dione Carlos<dione.csf@gmail.com>",
+  "license": "ISC"
+}
