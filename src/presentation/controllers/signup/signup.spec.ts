@@ -223,7 +223,7 @@ describe('SignUp Controller', () => {
 
     // The jest lib will spy on the isValid variable and return a error mock.
     jest.spyOn(addAccountStub, 'add').mockImplementationOnce(async () => {
-      return await new Promise((_resolve, reject) => reject(new Error()))
+      return await new Promise((resolve, reject) => reject(new Error()))
     })
 
     const httpRequest = {
