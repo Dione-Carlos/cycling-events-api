@@ -8,7 +8,7 @@ export const badRequest = (error: Error): HttpResponse => ({
 
 export const serverError = (error?: Error): HttpResponse => {
   if (error) {
-    console.log(error) // add a logger to visualize the logs
+    console.log(error)
   }
 
   return {
