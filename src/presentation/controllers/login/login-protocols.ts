@@ -1,3 +1,3 @@
 export * from '../../protocols'
-export * from '../../protocols/email-validator'
+export * from '../../helpers/validators/validator'
 export * from '../../../domain/useCases/authentication'
