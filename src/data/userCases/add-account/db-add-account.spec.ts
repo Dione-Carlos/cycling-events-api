@@ -3,7 +3,7 @@ import { AccountModel, AddAccountModel, Harsher, AddAccountRepository } from './
 
 const makeHarsher = (): Harsher => {
   class HarsherStub implements Harsher {
-    async harsh(value: string): Promise<string> {
+    async hash(value: string): Promise<string> {
       return await new Promise(resolve => resolve('hashed_password'))
     }
   }
@@ -51,7 +51,7 @@ const makeSut = (): SutTypes => {
 describe('DbAddAccount UseCase', () => {
   test('Should call Harsher with correct password', async () => {
     const { sut, harsherStub } = makeSut()
-    const harshSpy = jest.spyOn(harsherStub, 'harsh')
+    const harshSpy = jest.spyOn(harsherStub, 'hash')
 
     await sut.add(makeFakeAccountData())
 
@@ -61,7 +61,7 @@ describe('DbAddAccount UseCase', () => {
   test('Should throw if Harsher throws', async () => {
     const { sut, harsherStub } = makeSut()
 
-    jest.spyOn(harsherStub, 'harsh').mockReturnValueOnce(new Promise((resolve, reject) => reject(new Error())))
+    jest.spyOn(harsherStub, 'hash').mockReturnValueOnce(new Promise((resolve, reject) => reject(new Error())))
 
     const promise = sut.add(makeFakeAccountData())
 
