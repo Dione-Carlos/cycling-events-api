@@ -8,7 +8,7 @@ import { SignUpController } from '../../../presentation/controllers/signup/signu
 import { AccountMongoRepository } from '../../../infra/db/mongodb/account-repository/account'
 
 export const makeSignUpController = (): Controller => {
-  const salt = 10
+  const salt = 12
   const bcryptAdapter = new BcryptAdapter(salt)
   const accountMongoRepository = new AccountMongoRepository()
   const dbAddAccount = new DbAddAccount(bcryptAdapter, accountMongoRepository)
