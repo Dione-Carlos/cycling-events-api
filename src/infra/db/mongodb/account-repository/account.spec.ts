@@ -3,11 +3,7 @@ import { MongoHelper } from '../helpers/mongo-helper'
 
 describe('Account Mongo Repository', () => {
   beforeAll(async () => {
-    const url = process.env.MONGO_URL
-
-    if (url) {
-      await MongoHelper.connect(url)
-    }
+    await MongoHelper.connect(process.env.MONGO_URL)
   })
 
   afterAll(async () => {

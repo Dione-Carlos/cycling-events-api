@@ -1,6 +1,6 @@
 import { Collection } from 'mongodb'
-import { MongoHelper } from '../helpers/mongo-helper'
 import { LogMongoRepository } from './log'
+import { MongoHelper } from '../helpers/mongo-helper'
 
 const makeSut = (): LogMongoRepository => {
   return new LogMongoRepository()
@@ -10,11 +10,7 @@ describe('Log Mongo Repository', () => {
   let errorCollection: Collection
 
   beforeAll(async () => {
-    const url = process.env.MONGO_URL
-
-    if (url) {
-      await MongoHelper.connect(url)
-    }
+    await MongoHelper.connect(process.env.MONGO_URL)
   })
 
   afterAll(async () => {
