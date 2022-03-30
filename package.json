@@ -1,6 +1,6 @@
 {
   "name": "cycling-events-api",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Clean architecture implementation project study for a cyclist meeting events api",
   "scripts": {
     "start": "sucrase-node src/main/server.ts",
