@@ -1,8 +1,8 @@
-import { LogControllerDecorator } from './log'
 import { AccountModel } from '../../domain/models/account'
-import { LogErrorRepository } from '../../data/protocols/db/log-error-repository'
-import { serverError, serverSuccess } from '../../presentation/helpers/http/http-helpers'
+import { LogControllerDecorator } from './log-controller-decorator'
 import { Controller, HttpRequest, HttpResponse } from '../../presentation/protocols'
+import { LogErrorRepository } from '../../data/protocols/db/log/log-error-repository'
+import { serverError, serverSuccess } from '../../presentation/helpers/http/http-helpers'
 
 const makeFakeAccount = (): AccountModel => ({
   id: 'valid_id',
