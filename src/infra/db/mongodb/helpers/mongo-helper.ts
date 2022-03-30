@@ -15,11 +15,12 @@ export const MongoHelper = {
   },
 
   async getCollection(name: string): Promise<Collection> {
-    // if (this.client === null) await this.connect(this.url)
     return this.client.db().collection(name)
   },
 
   map: (collection: any): any => {
+    if (!collection) return null
+
     const { _id, ...collectionWithoutId } = collection
 
     return Object.assign({}, { id: _id }, collectionWithoutId)
