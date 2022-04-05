@@ -63,5 +63,8 @@
       "npm run test:staged",
       "git add --all"
     ]
+  },
+  "engines": {
+    "node": "16.x"
   }
 }
