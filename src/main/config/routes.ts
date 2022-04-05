@@ -1,5 +1,5 @@
-import { Express, Router } from 'express'
 import { readdirSync } from 'fs'
+import { Express, Router } from 'express'
 
 export default (app: Express): void => {
   const router = Router()
@@ -7,7 +7,7 @@ export default (app: Express): void => {
   app.use('/api', router)
 
   readdirSync(`${String(__dirname)}/../routes`).map(async (file) => {
-    if (!file.includes('.test.')) {
+    if (!file.endsWith('.map') && !file.includes('.test.')) {
       (await import(`../routes/${file}`)).default(router)
     }
   })
