@@ -60,8 +60,7 @@
   "lint-staged": {
     "*.ts": [
       "eslint 'src/**' --fix",
-      "npm run test:staged",
-      "git add --all"
+      "npm run test:staged"
     ]
   },
   "engines": {
