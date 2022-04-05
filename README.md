@@ -4,7 +4,7 @@ Api developed to apply the concepts of studies such as: clean architecture, desi
 
 ## Used stack
 
-- Node, Express, MongoDB and Jest
+- Node, Express, MongoDB, Docker-Compose and Jest
 
 ## Running tests
 
