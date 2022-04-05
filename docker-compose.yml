@@ -8,16 +8,17 @@ services:
       - ./data:/data/db
     ports:
       - '27017:27017'
-
   api:
     container_name: api-container
     build: .
     image: cycling-events-api
     restart: always
-    command: npm start
+    command: npm run debug
     volumes:
       - ./dist:/usr/src/cycling-events-api/dist
+      - ./package.json:/usr/src/cycling-events-api/package.json
     ports:
       - '5050:5050'
+      - '9222:9222'
     links:
       - mongo
